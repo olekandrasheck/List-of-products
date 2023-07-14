@@ -1,11 +1,11 @@
-import { IDummy } from "./App";
+import { ProductTypes } from "../App";
 import { ItemProduct } from "./ItemProduct";
 
-export const Listing: React.FC<{ items: IDummy[] }> = ({ items }) => {
+export const Listing: React.FC<{ items: ProductTypes[] }> = ({ items }) => {
   return (
     <div>
       <div className="item-list">
-        {items?.map((item: IDummy) => (
+        {items?.map((item: ProductTypes) => (
           <ItemProduct item={item} />
         ))}
       </div>

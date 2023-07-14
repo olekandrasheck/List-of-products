@@ -1,6 +1,6 @@
-import { IDummy, currency } from "./App";
+import { ProductTypes, currency } from "../App";
 
-export const ItemProduct: React.FC<{ item: IDummy }> = ({ item }) => {
+export const ItemProduct: React.FC<{ item: ProductTypes }> = ({ item }) => {
   const level = (rate: number) => {
     if (rate <= 10) {
       return "level-low";
