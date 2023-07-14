@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
-import { Listing } from "./Listing";
-import { Stars } from "./Stars";
+import { Listing } from "./components/Listing";
+import { Stars } from "./components/Stars";
 
 export enum currency {
   USD = "$",
@@ -9,7 +9,7 @@ export enum currency {
   GBP = "GBP",
 }
 
-export interface IDummy {
+export interface ProductTypes {
   listing_id: number;
   url: string;
   MainImage: MainImage;
@@ -23,7 +23,7 @@ export interface MainImage {
 }
 
 function App() {
-  const [dummyData, setDummyData] = React.useState<IDummy[]>([]);
+  const [dummyData, setDummyData] = React.useState<ProductTypes[]>([]);
 
   React.useEffect(() => {
     fetch("./etsy.json")

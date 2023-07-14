@@ -1,4 +1,4 @@
-import { Star } from "./Star";
+import { Star } from "../Star";
 
 export const Stars: React.FC<{ count: number }> = ({ count }) => {
   const arrStars = Array(count).fill("");
